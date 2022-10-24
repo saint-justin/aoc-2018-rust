@@ -10,9 +10,13 @@ fn main() {
 
     let content_arr: Vec<&str> = contents.split(['\n']).collect();
 
-    let out = day_01::solutions::solve_for_first_repeat(content_arr);
-    println!("Repeated value: {out}");
-
+    day_01(&content_arr);
 }
 
+fn day_01(input_vec: &Vec<&str>) {
+    let mut out = day_01::solutions::sum_all(&input_vec);
+    println!("Sum of frequencies: {out}");
 
+    out = day_01::solutions::solve_for_first_repeat(&input_vec);
+    println!("Repeated value: {out}");
+}
