@@ -1,5 +1,5 @@
 use std::{fs};
-// mod day_01;
+mod day_01;
 mod day_02;
 
 fn main() {
@@ -17,14 +17,20 @@ fn main() {
 
 /*
 fn day_01(input_vec: &Vec<&str>) {
+    // Part 1
     let mut out = day_01::solutions::sum_all(&input_vec);
     println!("Sum of frequencies: {out}");
 
+    // Part 2
     out = day_01::solutions::solve_for_first_repeat(&input_vec);
     println!("Repeated value: {out}");
 }
- */
+*/
 
 fn day_02(input_vec: &Vec<&str>) {
-    day_02::solutions::find_dups(&input_vec);
+    // Part 1
+    // day_02::solutions::find_dups(&input_vec);
+
+    // Part 2
+    day_02::solutions::find_commons(&input_vec);
 }
