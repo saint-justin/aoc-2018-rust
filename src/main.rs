@@ -39,6 +39,8 @@ fn day_02(input_vec: &Vec<&str>) {
 */
 
 fn day_03(input_vec: &Vec<&str>) {
-    let multiclaim_squares = day_03::solutions::find_multiclaim_squares(input_vec);
-    println!("  Squares claimed multiples times: {multiclaim_squares}");
+    // let multiclaim_squares = day_03::solutions::find_multiclaim_squares(input_vec);
+    // println!("  Squares claimed multiples times: {multiclaim_squares}");
+    let island_square_id = day_03::solutions::find_island_square(input_vec);
+    println!("  Island squares ID: {island_square_id}");
 }
