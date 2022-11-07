@@ -33,7 +33,6 @@ pub mod solutions {
       let claim_split = claim.split(' ').collect::<Vec<&str>>();
 
       let positions_split = claim_split[2].split(',').collect::<Vec<&str>>();
-
       let position = Point {
         x: positions_split[0].parse().unwrap(),
         y: remove_last_char(&positions_split[1]).parse().unwrap(),
@@ -43,7 +42,6 @@ pub mod solutions {
         .split('x')
         .map(|n| n.parse::<u32>().unwrap())
         .collect::<Vec<u32>>();
-
       let dimensions = Dimensions {
         w: dimensions_split[0],
         h: dimensions_split[1],
@@ -59,7 +57,7 @@ pub mod solutions {
               }
             },
             None => {
-              panic!("Position not accounted for: [{},{}]", x, y);
+              panic!("Position not accounted for: [{x},{y}]");
             },
           }
         }
@@ -80,14 +78,12 @@ pub mod solutions {
     for claim in input {
       let claim_split = claim.split(' ').collect::<Vec<&str>>();  //0: Plot #, 1: '@', 2: position, 3: height x width
   
-      // Parse position
       let positions_split = claim_split[2].split(',').collect::<Vec<&str>>();
       let position = Point {
         x: positions_split[0].parse().unwrap(),
         y: remove_last_char(&positions_split[1]).parse().unwrap(),
       };
   
-      // Parse dimensions
       let dimensions_split = claim_split[3].split('x').map(|n| n.parse::<u32>().unwrap()).collect::<Vec<u32>>();
       let dimensions = Dimensions {
         w: dimensions_split[0],
