@@ -36,8 +36,10 @@ fn main() {
     let out: (u32, u32) = day_04::solutions::find_sleepiest_guard(&content_arr);
     */
 
-    let polymer_remainder = day_05::solutions::collapse_polymer(&content_arr);
-    println!("  Polymer count remainding: {}", polymer_remainder.len());
+    // let mut polymer_remainder = day_05::solutions::collapse_polymer(&content_arr);
+    // println!("  Polymer count remaining: {}", polymer_remainder.len());
+    let polymer_remainder = day_05::solutions::collapse_unblocked_polymer(&content_arr);
+    println!("  Polymer length remaining: {}", polymer_remainder);
 }
 
 /// # format_input
